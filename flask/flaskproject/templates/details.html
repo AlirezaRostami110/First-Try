@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% block content %}
+
+    <h3>{{student.name}}</h3>
+    <small>{{ student.verify_date.strftime('%b. %d, %Y') }}</small><hr/>
+    <p>{{student.subject}}</p>
+    <p>{{student.un_id}}</p>
+    
+    <a type="button" class="btn btn-danger" href="/delete/{{student.id}}">Delete user!</a>
+    <a type="button" class="btn btn-info" href="/update/{{student.id}}">Update</a>
+
+{% endblock %}

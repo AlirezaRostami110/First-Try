@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{%block content %}
+    <div class="card">
+        {% for student in students %}
+            <a class ="card-body" href="/details/{{student.un_id}}/">{{student.name}}</a></br>
+        {% endfor %}
+    </div>
+    <a type="button" class="btn btn-success" href="/create/">Add</a>
+{% endblock %}

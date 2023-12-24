@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+
+{% block content%}
+    <h3>{{stu.name}} </h3>
+    <small> {{stu.verify_date}} </small><hr/>
+    <p> {{stu.subject}} </p>
+    <p> {{stu.un_id}} </p>
+
+    <a href="{%url 'delete' stu.id %}" type="button" class="btn btn-danger" >Delete user!</a>
+    <a href="{%url 'update' stu.id %}" type="button" class="btn btn-info" >update</a>
+{% endblock%}

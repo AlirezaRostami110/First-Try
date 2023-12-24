@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{%block content %} 
+  
+ {% if name ==  'Admin' %}
+     <h3> Hello boss...</h3>
+ {% else %} 
+     <h3> Hello {{name |upper}}...</h3>
+      
+ {% endif%}
+    
+{% endblock %}

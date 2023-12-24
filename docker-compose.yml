@@ -1,0 +1,28 @@
+version: '3'
+services:
+  fastapi:
+    build: 
+      context: ./fastapi
+      dockerfile: Dockerfile.fastapi
+    ports:
+      - "5000:5000"
+  flask:
+    build: 
+      context: ./flask
+      dockerfile: Dockerfile.flask
+    ports:
+      - "7000:7000"
+  django:
+    build: 
+      context: ./django
+      dockerfile: Dockerfile.django
+    ports:
+      - "8000:8000"
+  test:
+    build: 
+      context: ./test
+      dockerfile: Dockerfile.test
+    depends_on:
+      - fastapi
+      - flask
+      - django
