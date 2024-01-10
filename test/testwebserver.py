@@ -7,7 +7,7 @@ def compare_websites(urls):
     else:
         print("The webservers do not have the same output.")
 
-compare_websites(['http://0.0.0.0:8000/', 'http://0.0.0.0:5000/', 'http://0.0.0.0:7000'])
+compare_websites(['http://127.0.0.1:8000/', 'http://127.0.0.1:5000/', 'http://127.0.0.1:7000'])
 
 
 def header(urls):
@@ -15,4 +15,4 @@ def header(urls):
         response = requests.get(url)
         print(response.headers)
 
-header(['http://0.0.0.0:8000/', 'http://0.0.0.0:5000/', 'http://0.0.0.0:7000'])
+header(['http://127.0.0.1:8000/', 'http://127.0.0.1:5000/', 'http://127.0.0.1:7000'])
